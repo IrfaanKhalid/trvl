@@ -38,7 +38,11 @@ travel to the application and simply view what plans exist.
 - Offers available flights that organizers can approve/deny, and lets attendees know how much of the ticket can be subsidized.
 
 ### How'd you build it?
+<<<<<<< HEAD
 Hacker.travel() is built with Node, Express, Firebase, and React.
+=======
+Hacker.travel() is built with the FEAN stack (Firebase, Express.js, Angular, and Node.js).
+>>>>>>> 989db6ca60ab2a99cdfd84c39fb0126156d8013b
 
 ### Can I try this out and contribute to it?
 Yes! We're using the MIT License - feel free to fork this repo whenever you'd like.
