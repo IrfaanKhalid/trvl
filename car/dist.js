@@ -1,9 +1,9 @@
-
+function dist(loc) {
 var request = require('superagent');
 
-var usrloc = givenloc; //"40.1020,-88.2272";
+var usrloc = loc; //"40.1020,-88.2272";
 var hackloc = "36.1447,-86.8027";
-var key = "API KEY HERE";
+var key = "AIzaSyB-2Z36S6feZ_8Tt4OR0B8W6q9DM83zLnc";
 
 var url = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial';
 url += '&origins=' + usrloc + '&destinations=' + hackloc + '&key=' + key;
@@ -14,16 +14,17 @@ var data;
 
 
 request.get(url, function(err, res){
-  if (err) throw err;
-  else {
-  //console.log(res.text);
-  data=res.body;
-  //console.log(data.rows[0].elements[0].distance.value);
-  }
+if (err) throw err;
+else {
+//console.log(res.text);
+data=res.body;
+//console.log(data.text);
+console.log(data.rows[0].elements[0].distance.value);
+return data.rows[0].elements[0].distance.value;
+}
 });
+//return data.rows[0].elements[0].distance.value;
+}
 
-module.exports = {
-    getDist: function(givenloc) {
-        return data.rows[0].elements[0].distance.value;
-    }
-};
+
+exports.dist = dist;
