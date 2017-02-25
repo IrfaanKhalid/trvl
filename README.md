@@ -41,8 +41,7 @@ travel to the application and simply view what plans exist.
 <<<<<<< HEAD
 Hacker.travel() is built with Node, Express, Firebase, and React.
 =======
-Hacker.travel() is built with the FEAN stack (Firebase, Express.js, Angular, and Node.js).
->>>>>>> 989db6ca60ab2a99cdfd84c39fb0126156d8013b
+Hacker.travel() is built with Firebase, Express.js, Angular, and Node.js.
 
 ### Can I try this out and contribute to it?
 Yes! We're using the MIT License - feel free to fork this repo whenever you'd like.

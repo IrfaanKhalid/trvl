@@ -1,4 +1,4 @@
-function dist(loc) {
+function dist(loc, cb) {
 var request = require('superagent');
 
 var usrloc = loc; //"40.1020,-88.2272";
@@ -19,8 +19,8 @@ else {
 //console.log(res.text);
 data=res.body;
 //console.log(data.text);
-console.log(data.rows[0].elements[0].distance.value);
-return data.rows[0].elements[0].distance.value;
+//console.log(data.rows[0].elements[0].distance.value);
+cb(data.rows[0].elements[0].distance.value);
 }
 });
 //return data.rows[0].elements[0].distance.value;
