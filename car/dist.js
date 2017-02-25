@@ -1,7 +1,7 @@
 
 var request = require('superagent');
 
-var usrloc = "40.1020,-88.2272";
+var usrloc = givenloc; //"40.1020,-88.2272";
 var hackloc = "36.1447,-86.8027";
 var key = "API KEY HERE";
 
@@ -23,7 +23,7 @@ request.get(url, function(err, res){
 });
 
 module.exports = {
-    getDist: function() {
+    getDist: function(givenloc) {
         return data.rows[0].elements[0].distance.value;
     }
 };
