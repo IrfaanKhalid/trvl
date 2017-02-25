@@ -32,7 +32,7 @@ Coordinating all of this is tedious. Hacker.travel() offers an interface to let 
 attendees make travel plans and hackathon organizers leave the heavy lifting of organizing
 travel to the application and simply view what plans exist.
 
-Hacker.travel() does a few things:
+### Hacker.travel() does a few things.
 - Given a starting location, figures out how much of a reimbursement for gas an attendee can get if choosing to drive
 - Tracks RSVPs for buses - spots are often limited! - and keep track of buses en route to the event using GPS beacons.
 - Offers available flights that organizers can approve/deny, and lets attendees know how much of the ticket can be subsidized.
