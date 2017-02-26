@@ -5,22 +5,24 @@ var car = require('./src/car_calculations');
 
 var app = express();
 
-var usrloc = "40.1020,-88.2272"; // UIUC to test
-var vin = "2HGFB2F50DH537943";
+//var usrloc = "40.1020,-88.2272"; // UIUC to test
+//var vin = "2HGFB2F50DH537943";
 
 app.get('/', function(req, res) {
+    var usrloc = req.query.loc;
+    var vin = req.query.vin;
     car.calculate(usrloc, vin, function(cost) {
-        res.send({ cost: cost});   
+        res.send({ cost: cost });   
     });
 });
 
 app.listen(3000, function() {
-    console.log('Example app listening on port 3000!');
+    //console.log('Example app listening on port 3000!');
 });
 
-car.calculate(usrloc, vin, function(cost) {
-    console.log(cost);
-});
+//car.calculate(usrloc, vin, function(cost) {
+//    console.log(cost);
+//});
 
 // Testing
 //firebase.addAttendee('Arun', 'Purdue', 1, 40.0);
