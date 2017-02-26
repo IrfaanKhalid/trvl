@@ -10,4 +10,11 @@ config.firebase.databaseURL = "YOUR URL";
 
 config.edmunds.apiKey = "API KEY";
 
+
+
+// everything dealing with the location of the hackathon 
+// and the APIs to get it
+config.locations.hackathon = "36.1447,-86.8027"; // put your long lat here
+config.locations.gmapDistKey = "YOUR API KEY HERE";
+
 module.exports = config;

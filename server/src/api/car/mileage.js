@@ -1,4 +1,4 @@
-var config = require("./config");
+var config = require("./../../config");
 
 var exports = module.exports = {};
 var request = require('superagent');
