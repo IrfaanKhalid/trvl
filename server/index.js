@@ -2,8 +2,12 @@
 var express = require('express');
 //var firebase = require('./firebase_server.js')
 var car = require('./src/car_calculations');
+var cors = require('cors');
+var config = require('./src/config');
 
 var app = express();
+
+app.use(cors({ origin: 'http://localhost:' + config.ports.allow }));
 
 //var usrloc = "40.1020,-88.2272"; // UIUC to test
 //var vin = "2HGFB2F50DH537943";
@@ -27,7 +31,7 @@ app.get('/', function(req, res) {
     var usrloc = req.query.loc;
     var vin = req.query.vin;
     car.calculate(usrloc, vin, function(dist, mpg, cost) {
-        res.type('text/plain');
+        //res.type('text/plain');
         res.send({
             cost: cost,
             dist: dist,
