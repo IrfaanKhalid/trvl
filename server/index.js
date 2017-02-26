@@ -1,24 +1,32 @@
 // Required files/packages
-var express = require('express')
-var dist = require('./src/api/car/dist.js')
-var gprice = require('./src/api/car/gprice.js')
-var firebase = require('./firebase_server.js')
+var express = require('express');
+//var firebase = require('./firebase_server.js')
+var car = require('./src/car_calculations');
 
 var app = express();
 
-var usrloc = "40.1020,-88.2272"; // UIUC to test
+//var usrloc = "40.1020,-88.2272"; // UIUC to test
+//var vin = "2HGFB2F50DH537943";
 
 app.get('/', function(req, res) {
-    res.sendfile("src/static/index.html");
-})
+    var usrloc = req.query.loc;
+    var vin = req.query.vin;
+    car.calculate(usrloc, vin, function(cost) {
+        res.send({ cost: cost });   
+    });
+});
 
 app.listen(3000, function() {
-    console.log('Example app listening on port 3000!');
-})
+    //console.log('Example app listening on port 3000!');
+});
+
+//car.calculate(usrloc, vin, function(cost) {
+//    console.log(cost);
+//});
 
 // Testing
-firebase.addAttendee('Arun', 'Shit', 1, 40.0);
-firebase.addSchool('Shit', 40.441944, -86.9125, false);
-firebase.onTotalCostChange(function(total) {
-    console.log(total);
-});
+//firebase.addAttendee('Arun', 'Purdue', 1, 40.0);
+//firebase.addSchool('Purdue', 40.441944, -86.9125, false);
+//firebase.onTotalCostChange(function(total) {
+//    console.log(total);
+//});
