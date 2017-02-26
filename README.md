@@ -6,7 +6,7 @@ A web application made to simplify organizing hackathon travel logistics.
   * Keep track of all travel reimbursements for your event in a streamlined interface.
 
 ## Installation and Usage
-  * To isntall and use trvl, you'll need to have node and npm installed.
+  * To install and use trvl, you'll need to have node and npm installed.
 
 
     git clone https://github.com/IrfaanKhalid/trvl.git
@@ -15,8 +15,10 @@ A web application made to simplify organizing hackathon travel logistics.
     node start 
     <Navigate to localhost:3000 to see trvl in action.>
 
-## Contributor Guide
-[LINK TO CONTRIBUTING.md](https://github.com/IrfaanKhalid/trvl/blob/master/CONTRIBUTING.md)
+
+## Contributors
+* [Link to Contributor guide](https://github.com/IrfaanKhalid/trvl/blob/master/CONTRIBUTING.md)
+* [List of contributors](https://github.com/IrfaanKhalid/trvl/blob/master/CONTRIBUTORS.md)
 
 ## License 
-trvl is licensed under the terms of the MIT license.
+* trvl is licensed under the terms of the MIT license.
