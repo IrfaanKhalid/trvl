@@ -1,7 +1,8 @@
 // Required files/packages
 var express = require('express')
-var dist = require('../data/dist.js')
-var gprice = require('../data/gprice.js')
+var dist = require('./src/api/car/dist.js')
+var gprice = require('./src/api/car/gprice.js')
+var fbadmin = require('./fbadmin.js')
 
 var app = express();
 
@@ -13,4 +14,5 @@ app.get('/', function(req, res) {
 
 app.listen(3000, function() {
     console.log('Example app listening on port 3000!');
+    fbadmin.test();
 })
