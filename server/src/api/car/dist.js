@@ -1,29 +1,31 @@
-function dist(loc, cb) {
-var request = require('superagent');
+var config = require("./../../config");
 
-var usrloc = loc; //"40.1020,-88.2272";
-var hackloc = "36.1447,-86.8027";
-var key = "AIzaSyB-2Z36S6feZ_8Tt4OR0B8W6q9DM83zLnc";
-
-var url = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial';
-url += '&origins=' + usrloc + '&destinations=' + hackloc + '&key=' + key;
-
-//console.log(url);
-
-var data;
+function dist(usrloc, cb) {
+    var request = require('superagent');
 
 
-request.get(url, function(err, res){
-if (err) throw err;
-else {
-//console.log(res.text);
-data=res.body;
-//console.log(data.text);
-//console.log(data.rows[0].elements[0].distance.value);
-cb(data.rows[0].elements[0].distance.value);
-}
-});
-//return data.rows[0].elements[0].distance.value;
+    var hackloc = config.locations.hackathon;
+    var key = config.locations.gmapDistKey;
+
+    var url = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial';
+    url += '&origins=' + usrloc + '&destinations=' + hackloc + '&key=' + key;
+
+    //console.log(url);
+
+    var data;
+
+
+    request.get(url, function(err, res) {
+        if (err) throw err;
+        else {
+            //console.log(res.text);
+            data = res.body;
+            //console.log(data.text);
+            //console.log(data.rows[0].elements[0].distance.value);
+            cb(data.rows[0].elements[0].distance.value);
+        }
+    });
+    //return data.rows[0].elements[0].distance.value;
 }
 
 

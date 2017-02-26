@@ -1,4 +1,4 @@
-var config = require("./config");
+var config = require("./../../config");
 
 var exports = module.exports = {};
 var request = require('superagent');
@@ -9,7 +9,7 @@ function getMileage(vin, callback) {
     var url = 'https://api.edmunds.com/api/vehicle/v2/vins/';
     url += vin;
     url += "?fmt=json&api_key=";
-    url += config.edmunds.apiKey;
+    url += config.gas.apiKey;
 
 
     request.get(url, function(err, res) {
