@@ -58,3 +58,6 @@ typings/
 .env
 
 config.js*
+
+# Firebase service account key
+hack-travel-2a8a2-firebase-adminsdk-fgomo-23c3ac8e10.json
