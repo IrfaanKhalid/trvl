@@ -12,7 +12,7 @@ A web application made to simplify organizing hackathon travel logistics.
     git clone https://github.com/IrfaanKhalid/trvl.git
     cd trvl/
     npm install
-    node start 
+    node ./server/index.js
     <Navigate to localhost:3000 to see trvl in action.>
 
 
