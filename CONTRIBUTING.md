@@ -13,6 +13,9 @@ certainly happen at some point in the future.
 ## Development environment details
 * You can develop in any OS as long as you have node.js and npm installed.
 
+## Mode of Transport Plugins
+Our goal is to manage as many modes of transport as possible. Hackathons right now offer very few multi-modal transport routes: we would like to. Currently, we have implemented driving and flights. We expect that other hackathon organizers (and us!) will add more plugins. Make sure that yours includes a simple callback and that all its modules are in a single folder
+
 ## How to submit changes
 * Submit a pull request or open an issue and we'll get back to you as soon as possible! 
     
