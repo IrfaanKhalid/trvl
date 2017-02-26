@@ -18,7 +18,7 @@ Logistics is tough - it pertains to securing a venue, transporting attendees, an
 mouths. trvl focused on the second task of the logistics team - actually getting attendees to the 
 event.
 
-### Okay, so how exactly do your attendees get there?
+### Okay, so how exactly do hackers get there?
 - Car - People can drive themselves if they have access to a vehicle.
 - Bus - We send out buses to schools with many interested applicants.
 - Flight - In some cases, we can fly attendees out for our event!
@@ -33,7 +33,10 @@ travel to the application and simply view what plans exist.
 - Neatly organizes all of this info for organizers.
 
 ### How is trvl built?
-trvl was built with love using Firebase, Express.js, and React.js at HackIllinois 2017.
+trvl was built with love using Firebase, Node.js, Express.js, and JQuery.
+
+trvl was originally designed and built by Irfaan Khalid, Benjamin Cooper, John Valin, Ray Sun, and Arun Arjunakani 
+at HackIllinois 2017.
 
 ### License
 Yes! trvl is built under the MIT License - feel free to fork this repo whenever you'd like. We want to 
