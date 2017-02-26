@@ -21,17 +21,18 @@ var allowCrossDomain = function(req, res, next) {
     }
 };
 
-app.use(allowCrossDomain);
+//app.use(allowCrossDomain);
 
 app.get('/', function(req, res) {
     var usrloc = req.query.loc;
     var vin = req.query.vin;
     car.calculate(usrloc, vin, function(dist, mpg, cost) {
+        res.type('text/plain');
         res.send({
             cost: cost,
             dist: dist,
             mpg: mpg
-        });   
+        }); 
     });
 });
 
