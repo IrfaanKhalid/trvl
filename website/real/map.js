@@ -11,12 +11,21 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 // EXPECTING LAT LONG ARRAY
 function drawRoute(start, end) {
-    L.Routing.control({
+    var route = L.Routing.control({
         waypoints: [
             L.latLng(start[0], start[1]),
             L.latLng(end[0], end[1])
-        ]
-    }).addTo(map);
+        ],
+        lineOptions: {
+            styles: [{ color: 'rebeccapurple', opacity: 1, weight: 6 }]
+        }
+    });
+
+    // L.routing.line({styles({ color: "pink" })}  
+
+
+    route.addTo(map).hide();
+
 }
 
 
