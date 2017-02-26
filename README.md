@@ -30,8 +30,8 @@ travel to the application and simply view what plans exist.
 - Given a starting location, figures out how much of a gas reimbursement an attendee can receive.
 - Shows available flights, and lets attendees know how much of the ticket can be subsidized.
 
-### How is TRVL built?
-TRVL was built with love using Firebase, Express.js, and React.js at HackIllinois 2017.
+### How is trvl built?
+trvl was built with love using Firebase, Express.js, and React.js at HackIllinois 2017.
 
 ### License
-Yes! We're using the MIT License - feel free to fork this repo whenever you'd like.
+Yes! trvl is built under the MIT License - feel free to fork this repo whenever you'd like.
