@@ -1,0 +1,12 @@
+header {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    background-color: #0d0d0d;
+}
+
+#userType{
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
