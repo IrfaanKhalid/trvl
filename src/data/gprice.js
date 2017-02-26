@@ -12,10 +12,10 @@ var data = {
    }
 };
 
-console.log(data.fuelPrices.regular);
+//console.log(data.fuelPrices.regular);
 
 module.exports = {
     getGasPrice: function() {
-        return data.regular;
+        return data.fuelPrices.regular;
     }
 };

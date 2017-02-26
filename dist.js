@@ -24,6 +24,7 @@ request.get(url, function(err, res){
 
 module.exports = {
     getDist: function(givenloc) {
+        console.log(data.text);
         return data.rows[0].elements[0].distance.value;
     }
 };
