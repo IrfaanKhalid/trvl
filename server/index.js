@@ -11,8 +11,12 @@ var app = express();
 app.get('/', function(req, res) {
     var usrloc = req.query.loc;
     var vin = req.query.vin;
-    car.calculate(usrloc, vin, function(cost) {
-        res.send({ cost: cost });   
+    car.calculate(usrloc, vin, function(dist, mpg, cost) {
+        res.send({
+            cost: cost,
+            dist: dist,
+            mpg: mpg
+        });   
     });
 });
 
