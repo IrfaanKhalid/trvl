@@ -8,13 +8,13 @@ A web application made to simplify organizing hackathon travel logistics.
 ## Installation and Usage
   * To install and use trvl, you'll need to have node and npm installed.
 
-
+```
     git clone https://github.com/IrfaanKhalid/trvl.git
     cd trvl/
     npm install
     node ./server/index.js
     <Navigate to localhost:3000 to see trvl in action.>
-
+```
 
 ## Contributors
 * [Link to Contributor guide](https://github.com/IrfaanKhalid/trvl/blob/master/CONTRIBUTING.md)
