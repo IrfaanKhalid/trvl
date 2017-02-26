@@ -9,14 +9,14 @@ function calculate(usrloc, vin, callback) {
         travelDistance = metersToMiles(distance);
         if (travelDistance !== null && mpg !== null) {
             var cost = travelDistance / mpg * config.gas.price;
-            callback(cost);
+            callback(travelDistance, mpg, cost);
         }
     });
     mileage.getMileage(vin, function(milespergallon) {
         mpg = averageMPG(milespergallon.city, milespergallon.highway);
         if (travelDistance !== null && mpg !== null) {
             var cost = travelDistance / mpg * config.gas.price;
-            callback(cost);
+            callback(travelDistance, mpg, cost);
         }
     });
 }
