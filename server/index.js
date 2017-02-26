@@ -17,5 +17,8 @@ app.listen(3000, function() {
 })
 
 // Testing
-firebase.addAttendee('Arun', 'Shit', 1, 0.0);
+firebase.addAttendee('Arun', 'Shit', 1, 40.0);
 firebase.addSchool('Shit', 40.441944, -86.9125, false);
+firebase.onTotalCostChange(function(total) {
+    console.log(total);
+});
